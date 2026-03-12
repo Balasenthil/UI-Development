@@ -1,0 +1,145 @@
+section {
+  padding: 2em 0;
+}
+.container {
+  max-width: 1140px;
+}
+h1 {
+  font-size: 2rem;
+}
+.logintext-wrap {
+  background: #596af7;
+  background: -moz-linear-gradient(135deg, 596af7 0%, #5560f3 100%);
+  background: -webkit-linear-gradient(45deg, #596af7 0%, #5560f3 100%);
+  background: -o-linear-gradient(135deg, #596af7 0%, #5560f3 100%);
+  background: -ms-linear-gradient(135deg, #596af7 0%, #5560f3 100%);
+  background: -webkit-linear-gradient(135deg, #596af7 0%, #5560f3 100%);
+  background: -o-linear-gradient(135deg, #596af7 0%, #5560f3 100%);
+  background: linear-gradient(135deg, #596af7 0%, #5560f3 100%);
+  color: #fff;
+  width: 50%;
+}
+.logintext-wrap .text h2 {
+  font-weight: 900;
+  color: #fff;
+}
+.btn.btn-white.btn-outline-white {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+.loginform {
+  width: 50%;
+}
+.form-container {
+  width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+.signin-form input {
+  border-radius: 50px;
+  background-color: #eeeeee;
+}
+.signin-form input:focus{
+  border: none;
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+}
+.login-button {
+  background-color: #596af7;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  padding: 10px 0px;
+}
+.login-button:hover,
+.login-button:active {
+  background-color: transparent !important;
+  color: #596af7 !important;
+  border: 1px solid #596af7 !important;
+}
+.forgot-password a {
+  text-decoration: none;
+  color: #989696;
+}
+input[type="checkbox"] {
+  accent-color: #596af7;
+}
+header {
+  background-color: #596af7;
+}
+header .logo {
+  color: #ffffff;
+  font-size: 24px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+header ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+@media only screen and (max-width: 792px) {
+  .card-container .card {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    background-color: #596af7;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    z-index: 1001;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+    justify-content: flex-start;
+  }
+  .logintext-wrap,
+  .loginform {
+    width: 100%;
+  }
+}
