@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+body{
+  background-color: #ffffff;
+  font-family: Roboto;
+}
+header{
+  background-color: #1d70b8;
+}
+header .logo{
+  color: #ffffff;
+  font-size: 24px;
+}
+ header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+ }
+ header ul{
+  display: flex;
+  gap: 25px;
+  list-style: none;
+ }
+ header ul li a{  
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+ }
+ .pricing-table-container h5{
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    font-weight: 200;
+ }
+ .card-container{
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+ }
+ .card-container .card{
+  width: calc((100% - 100px) / 3);
+  text-align: center;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  box-shadow:3px 3px 3px #f8f2ff;
+  transition: all 0.3s ease;
+ }
+ .card-container h1{
+  padding: 25px 0px;
+ }
+ .pricing-basic .card-header h1{
+  background: linear-gradient(45deg, #48e077, #c33beb);
+  color: #ffffff;
+ }
+ .pricing-pro .card-header h1{
+  background: linear-gradient(45deg, #4d188d, #8aff6a);
+  color: #ffffff;
+ }
+ .pricing-enterprise .card-header h1{
+  background: linear-gradient(45deg, #1D976C, #93F9B9);
+  color: #ffffff;
+ }
+ .card-container .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+ }
+ .card-container h2{
+  padding: 40px 0px;
+ }
+ .card-container .card-body ul{
+  margin-bottom: 25px;
+ }
+ .card-container .card ul li{
+  padding: 15px 0px;
+  border-bottom: 1px solid #eeeeee;
+ }
+ .card-container .card ul li:last-child{
+  border-bottom: 0;
+ }
+ button{
+    background: none;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+ }
+ .pricing-basic button{
+    border: 1px solid #0d6efd;
+    color: #0d6efd;
+    color: 0d6efd;
+ }
+ .pricing-pro button{
+  background-color: #0d6efd;
+  color: #ffffff;
+ }
+ .pricing-enterprise button{
+  background-color: #198754;
+  color: #ffffff;
+ }
+ .checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+ #check {
+    display: none;
+  }
+
+ @media only screen and (max-width: 792px) {
+  .card-container .card{
+    width: 100%;
+  }
+ }
+ @media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+    }
+  
+    nav ul {
+      position: fixed;
+      top: 65px;
+      right: -100%;
+      background-color: green;
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      z-index: 1001;
+    }
+  
+    nav ul li {
+      margin: 20px 0;
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+    }
+  
+    #check:checked ~ ul {
+      right: 0;
+    }
+  }
