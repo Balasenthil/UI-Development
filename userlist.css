@@ -1,0 +1,109 @@
+
+header {
+  background-color: #596af7;
+}
+header .logo {
+  color: #ffffff;
+  font-size: 24px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+header ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+.typing-text {
+  font-family: monospace;
+  font-size: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+}
+
+.typing-text {
+  width: 0;
+  animation: typing 5s steps(31) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 31ch;
+  }
+}
+
+.typing-text {
+  animation: typing 5s steps(31) forwards, blink 0.9s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+section .input-group{
+  width: 20%;
+}
+
+section .input-group input:focus{
+  box-shadow: none;
+}
+
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    background-color: #596af7;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    z-index: 1001;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+    justify-content: flex-start;
+  }
+}
